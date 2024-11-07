@@ -3,6 +3,11 @@ import pandas as pd
 
 
 def take_data_from_api (api_link, params):
+
+    """
+    the function works for the api to take the data from the api, particularly from the flights data,
+    here is taken the data for the columns choosed by the challenge, and also here is changed the slashes for hyphens
+    """
     api_result = requests.get(api_link, params)
 
     api_response = api_result.json()
@@ -38,6 +43,9 @@ def take_data_from_api (api_link, params):
     return content_for_df
 
 def create_df_for_flights(df_schema, df_content):
+    """
+    this function create the df to upload to take the data to the table
+    """
     df_flights = pd.DataFrame(columns = df_schema, data = df_content)
 
     return df_flights
