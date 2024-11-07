@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
-      ports:
-        -"5432:5432"  # Mapea el puerto para acceso externo
+    ports:
+      - "5432:5432"  # Ajuste aquí, eliminando el guión extra
     volumes:
       - "./sql:/docker-entrypoint-initdb.d"

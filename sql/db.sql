@@ -1,5 +1,8 @@
 CREATE DATABASE testfligoo;
 
+-- Cambia a la base de datos testfligoo
+\c testfligoo;
+
 CREATE TABLE testdata(
  flight_date            DATE,
  flight_status          VARCHAR NOT NULL,
